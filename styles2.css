@@ -1,0 +1,67 @@
+nav {
+	list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(13, 151, 140);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+}
+
+header {
+    overflow: hidden;
+}
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    float: left;
+    display: block;
+    color:rgb(92, 179, 150);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.nav-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.nav-link:hover {
+    background-color: rgb(10, 105, 97);
+}
+
+#search-bar {
+    float: right;
+    padding: 5px;
+    margin: 10px;
+    min-width: 30%;
+}
+
+
+body {
+    background-image: url(Img/more-leaves-on-green.png);
+    margin: 0px;
+}
+
+main {
+    background-color: azure;
+    box-shadow: 1px 1px 20px 0px rgb(61, 61, 61) ;
+    margin: 5%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
