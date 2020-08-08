@@ -53,6 +53,7 @@ header {
     text-decoration: none;
     margin: auto;
     font-size: large;
+    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -69,13 +70,13 @@ header {
 }
 
 
-body {
+/* body {
     background-image: url(Img/more-leaves-on-green.png);
     margin: 0px;
-}
+} */
 
 main {
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 20px 0px rgb(61, 61, 61) ;
     margin: 5%;
     max-width: 700px;
