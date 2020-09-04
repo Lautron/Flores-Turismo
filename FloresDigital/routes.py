@@ -1,8 +1,5 @@
-from flask import Flask, render_template
-from flask_bootstrap import Bootstrap
-
-app = Flask(__name__)
-bootstrap = Bootstrap(app)
+from flask import render_template
+from FloresDigital import app
 
 @app.route('/')
 def index():
@@ -33,6 +30,3 @@ def grid():
     'El alcazar': 'img/El alcazar.jpg',
     }
     return render_template('grid.html', items=items)
-
-if __name__ == "__main__":
-    app.run(debug=True)
