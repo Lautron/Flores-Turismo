@@ -4,7 +4,8 @@ from flores_digital.models import GridTest
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    towns = {'Ruiz de Montoya': 'bg-gray', 'Puerto Rico': '', 'Capiovi': 'bg-gray', 'Garuhapé': '', 'Montecarlo': 'bg-gray', 'Caraguatay': '', 'El Alcazar': 'bg-gray'}
+    return render_template('index.html', towns=towns)
 
 @app.route('/layout')
 def layout():

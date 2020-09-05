@@ -1,28 +1,52 @@
 {% extends "layout.html" %}
+
+{% block style %}
+
+        .my-section{
+            min-height: 25rem;
+            width: 100%;
+            margin: 0;
+            border: 0;
+        }
+        .bg-gray{
+            background-color: rgb(238, 238, 238);
+        }
+
+{% endblock %}
+
 {% block content %}
 <main>
-    <div class="container bg-light pt-3 border shadow">
-        <h1 class="text-center">Bienvenido a Flores Turismo</h1>
-        <p class='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi a ipsum gravida hendrerit a ut mauris. Maecenas efficitur finibus erat, sit amet dignissim neque tincidunt euismod. Pellentesque sollicitudin laoreet tortor, vitae consequat mauris ultricies sed. Vestibulum mattis purus elit, ultricies posuere lectus suscipit id. Quisque lacus urna, lobortis imperdiet luctus molestie, varius sit amet dui. Aenean sit amet purus at tortor pharetra lobortis et tristique purus. Sed aliquam mi ligula, sit amet placerat erat pellentesque rhoncus. Donec ut arcu finibus, tempus lacus sed, posuere urna. Mauris ultrices libero metus, non tincidunt augue congue a. Aenean massa erat, viverra nec tincidunt ac, aliquet et leo. In finibus ligula ac libero iaculis ultrices. Nam turpis leo, laoreet eget elit vel, tincidunt gravida dui. Cras in magna fermentum, egestas nulla ut, tristique lacus. Aliquam pharetra, augue sit amet iaculis volutpat, diam ipsum sollicitudin orci, sit amet cursus nisi ipsum sed sapien. Cras laoreet nunc quis suscipit varius.</p>
-
-        <p class='text-justify'>In eu laoreet erat. Aliquam finibus metus et vehicula interdum. Integer dapibus mattis urna non congue. Curabitur et mi suscipit, ultrices tortor vel, blandit enim. Vivamus arcu massa, finibus a metus venenatis, efficitur ullamcorper elit. Curabitur suscipit purus sed imperdiet tristique. Donec ligula lacus, lobortis a maximus non, tempor a urna. Phasellus rutrum nulla non dapibus fringilla. Sed bibendum leo sit amet metus maximus semper.
+    <!-- <div class="container bg-light pt-3 border shadow"> -->
+        <div class="container-fluid border bg-gray">
+            <div class="text-center">
+                <h1>Bienvenido a Flores Turismo!</h1>
+            </div>
+        </div>
+        <div class="container-fluid my-section border">
+            <div class="text-center">
+                <h3>La Region de las Flores</h3>
+            </div>
+        </div>
+        {% set gray_used = False %}
+        {% for town, color in towns.items() %}
+            <div class="container-fluid my-section border {{ color }}">
+                <div class="text-center">
+                    <h3>{{ town }}</h3>
+                </div>
+            </div>
+        {% endfor %}
         
-        <p class='text-justify'>Fusce ipsum purus, ultrices eget sapien sed, tincidunt euismod tellus. Suspendisse commodo ultricies urna ac gravida. Phasellus vestibulum quam ac dolor fringilla aliquet. Nunc id dolor vitae enim placerat imperdiet. Quisque in tellus sed risus elementum dictum dapibus quis quam. Suspendisse auctor lectus quis ipsum dapibus finibus sed sed turpis. Donec odio tellus, consequat in lacus quis, placerat iaculis ipsum. Cras tempus ligula ipsum. Morbi ac sem auctor, consequat erat ut, faucibus arcu. In sodales aliquet ipsum eget consectetur. Suspendisse viverra mollis neque, ac convallis mi viverra in. Maecenas molestie aliquam purus id placerat. Vestibulum suscipit luctus auctor. Sed posuere eu quam in feugiat.</p>
-        
-        <p class='text-justify'>Vestibulum dui elit, malesuada quis dapibus rutrum, viverra ut nunc. Vestibulum nulla nulla, hendrerit a condimentum in, tempor vestibulum justo. Pellentesque venenatis dui id tortor ultricies, vestibulum dignissim massa sagittis. Cras auctor consectetur mi et molestie. Quisque ut tortor lectus. Suspendisse magna ipsum, egestas a tincidunt non, vestibulum sit amet lacus. Nulla ornare cursus lectus, non placerat risus tempus eget. Fusce non ex molestie mi commodo sodales laoreet id dolor.</p>
-        
-        <p class='text-justify'>Suspendisse ut mollis urna, ac tempus dolor. Pellentesque ultricies pharetra massa eu bibendum. Suspendisse in lorem dictum, aliquam sem quis, interdum elit. Phasellus est ipsum, efficitur vel molestie non, pretium in tortor. Proin blandit lorem id lectus gravida porttitor. Sed vestibulum maximus ligula eu facilisis. Integer quis quam sed enim pharetra bibendum at id nulla. Etiam nec felis et nisl cursus varius.</p>
-        
-        <p class='text-justify'>Praesent pellentesque, magna vitae pulvinar bibendum, erat lectus sodales neque, vel congue enim odio eu dui. Sed rhoncus neque in efficitur congue. Ut sit amet sapien nunc. Maecenas at facilisis sapien, in viverra leo. Curabitur fringilla lacus id ligula fringilla, in viverra nunc porttitor. Sed congue, leo ut pulvinar aliquet, purus justo hendrerit orci, non ultricies eros odio non velit. Sed sit amet sapien pretium, porta dui nec, ultricies nulla. Ut molestie quis enim eget venenatis. Pellentesque finibus pellentesque urna sit amet finibus. Fusce fringilla et justo quis ornare. Morbi non molestie nisl. Vivamus sagittis nisl et sollicitudin condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec blandit leo ac lectus sodales vulputate.</p>
-        
-        <p class='text-justify'>Nam viverra eu nisi eget luctus. Praesent in lorem at nibh ultricies malesuada ut non nibh. Proin sodales quam sapien, a tempor tortor tincidunt vel. Suspendisse eget euismod tortor. Pellentesque nec fermentum tellus. Nulla pharetra purus metus, eget volutpat dolor finibus in. Quisque consequat purus ante, ac placerat ex tristique in.</p>
-        
-        <p class='text-justify'>Aliquam varius, elit sit amet vestibulum vestibulum, ex dui pharetra elit, quis consequat metus libero id sapien. Nullam orci eros, ullamcorper vel tincidunt eu, feugiat nec ipsum. Vestibulum pellentesque quam nisi, vel fermentum purus bibendum non. Suspendisse pellentesque posuere posuere. Sed non rutrum metus. Etiam gravida molestie quam at mollis. Mauris bibendum, lacus ac tristique tincidunt, risus turpis elementum ligula, quis gravida ipsum arcu eu ipsum. Etiam velit nisl, pretium vel rhoncus in, iaculis a nibh. Donec aliquet, mauris eu ultrices posuere, massa elit convallis nisi, eu posuere eros libero id metus. Aliquam vitae dui eget est venenatis condimentum nec eget mi. In hac habitasse platea dictumst. Sed rhoncus placerat nulla, id pharetra nunc tincidunt vitae. Nam convallis augue sed diam aliquet commodo.</p>
-        
-        <p class='text-justify'>Aliquam tristique porta orci, et condimentum ante. Nam aliquet ultricies mauris, sit amet feugiat lorem efficitur nec. Donec ac turpis vel magna ultricies egestas pretium eget turpis. Nullam sit amet nisl non mi sodales bibendum in a erat. Vivamus eget mauris vitae dolor suscipit laoreet. Aenean efficitur, urna ac placerat congue, nisi mauris facilisis libero, eget faucibus lorem nisl ac nunc. Donec et nisi at lectus laoreet interdum. Donec ornare mauris elit, ut tincidunt risus condimentum sed. Proin mollis libero elit, nec molestie velit laoreet posuere.</p>
-        
-        <p class='text-justify'>Nullam eleifend eleifend turpis, sed pellentesque tortor sagittis pellentesque. Suspendisse nec ante id magna mollis faucibus. Nunc metus ante, bibendum tincidunt dolor et, ultricies vestibulum lectus. Praesent sapien libero, venenatis vitae porttitor quis, hendrerit ac dui. Sed vehicula accumsan dapibus. Aliquam erat volutpat. Pellentesque dapibus viverra neque, et luctus diam fringilla nec. Cras sagittis placerat egestas.</p>
-</p>
-    </div>
-</main>
+        <!-- <div class="container-fluid my-section border">
+            <div class="text-center">
+                <h3>About</h3>
+            </div>
+        </div>
+        <div class="container-fluid my-section border bg-gray">
+            <div class="text-center">
+                <h3>Contact Us</h3>
+            </div>
+        </div>
+        <footer>Footer placeholder</footer>
+</div>
+</main> -->
 {% endblock %}
