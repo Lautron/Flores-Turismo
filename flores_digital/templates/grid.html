@@ -5,7 +5,8 @@
     <div class="row mx-auto">
     {% for item in items: %}
         <div class="col-md-4 shadow p-0 m-2" style="max-width: 40vh; ">
-            <img class="img-fluid" style="min-height: 40vh;" src="{{url_for('static', filename=item.image_file)}}" alt="Picture of {{ item.city_name }}">
+            <h3>{{ item.image_file }}</h3>
+            <!-- <img class="img-fluid" style="min-height: 40vh;" src="{{url_for('static', filename=item.image_file)}}" alt="Picture of {{ item.city_name }}"> -->
             <h3 class="text-center"><a class="stretched-link text-decoration-none text-dark" href="#">{{ item.city_name }}</a></h3>
         </div>
     {% endfor %}
