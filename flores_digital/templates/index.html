@@ -29,9 +29,15 @@
         </div>
         {% set gray_used = False %}
         {% for town, color in towns.items() %}
-            <div class="container-fluid my-section border {{ color }}">
-                <div class="text-center">
-                    <h3>{{ town }}</h3>
+        <div class="text-center {{ color }}">
+            <h3 class="m-0">{{ town }}</h3>
+        </div>
+        <div class="container-fluid my-section border-bottom {{ color }}">
+                <div class="container">
+                    <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/552/104/non_2x/shield-crest-vector-icon.jpg" class="img-fluid col-sm-3">
+                        <p class="col-sm-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    </div>
                 </div>
             </div>
         {% endfor %}
