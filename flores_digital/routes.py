@@ -4,6 +4,7 @@ from flores_digital.models import GridTest
 
 @app.route('/')
 def index():
+    #TODO create db to replace the dict.
     towns = {
     'La Región de las Flores': {'img': 'img/escudos/region de las flores.png'}, 
     'Ruiz de Montoya': {'img': 'img/escudos/Ruiz de Montoya.png'}, 
