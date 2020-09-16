@@ -22,37 +22,36 @@
                 <h1>Bienvenido a Flores Turismo!</h1>
             </div>
         </div>
-        <div class="container-fluid my-section border">
-            <div class="text-center">
-                <h3>La Region de las Flores</h3>
-            </div>
-        </div>
-        {% set gray_used = False %}
+
+        {% set ns = namespace(used=false) %}
         {% for town in towns.keys() %}
-        <div class="text-center {{ towns[town]['color'] }}">
-            <h3 class="m-0">{{ town }}</h3>
-        </div>
-        <div class="container-fluid my-section border-bottom {{ towns[town]['color'] }}">
-                <div class="container">
-                    <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
-                        <img src="{{url_for('static', filename=towns[town]['img'])}}" class="img-fluid col-sm-3" alt="A picture of {{ town }}">
-                        <p class="col-sm-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            {% if ns.used == false %}
+                <div class="text-center">
+                    <h3 class="m-0">{{ town }}</h3>
+                </div>
+                <div class="container-fluid my-section border-bottom">
+                    <div class="container">
+                        <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
+                            <img src="{{url_for('static', filename=towns[town]['img'])}}" class="img-fluid col-sm-2 shadow" alt="A picture of {{ town }}">
+                            <p class="col-sm-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                {% set ns.used = true %}
+            {% else %}
+                <div class="text-center bg-gray">
+                    <h3 class="m-0">{{ town }}</h3>
+                </div>
+                <div class="container-fluid my-section border-bottom bg-gray">
+                    <div class="container">
+                        <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
+                            <img src="{{url_for('static', filename=towns[town]['img'])}}" class="img-fluid col-sm-2 shadow" alt="A picture of {{ town }}">
+                            <p class="col-sm-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        </div>
+                    </div>
+                </div>
+                {% set ns.used = false %}
+            {% endif %}
         {% endfor %}
-        
-        <!-- <div class="container-fluid my-section border">
-            <div class="text-center">
-                <h3>About</h3>
-            </div>
-        </div>
-        <div class="container-fluid my-section border bg-gray">
-            <div class="text-center">
-                <h3>Contact Us</h3>
-            </div>
-        </div>
-        <footer>Footer placeholder</footer>
-</div>
-</main> -->
+</main> 
 {% endblock %}
