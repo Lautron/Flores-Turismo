@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block style %}
+    <link rel="stylesheet" href="{{url_for('static', filename='flowers.css')}}">
     <style>
         .my-section{
             min-height: 25rem;
@@ -15,14 +16,45 @@
 {% endblock %}
 
 {% block content %}
-<main>
-    <!-- <div class="container bg-light pt-3 border shadow"> -->
-        <div class="container-fluid border bg-gray">
-            <div class="text-center">
-                <h1>Bienvenido a Flores Turismo!</h1>
-            </div>
+<header>
+    <section class="flower-section">
+        <h2 class="flower-title">Bienvenido a Flores Turismo</h2>
+        <div class="set">
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/1.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/2.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/3.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/4.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/5.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/6.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/7.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/8.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/9.png')}}" alt=""></div>
         </div>
-
+        <div class="set set2">
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/1.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/2.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/3.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/4.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/5.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/6.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/7.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/8.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/9.png')}}" alt=""></div>
+        </div>
+        <div class="set set3">
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/1.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/2.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/3.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/4.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/5.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/6.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/7.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/8.png')}}" alt=""></div>
+            <div> <img style="width: 6rem;" src="{{url_for('static', filename='img/flores/9.png')}}" alt=""></div>
+        </div>
+    </section>
+</header>
+<main style="position: relative;">
         {% set ns = namespace(used=false) %}
         {% for town in towns.keys() %}
             {% if ns.used == false %}
@@ -53,5 +85,5 @@
                 {% set ns.used = false %}
             {% endif %}
         {% endfor %}
-</main> 
+</main>
 {% endblock %}

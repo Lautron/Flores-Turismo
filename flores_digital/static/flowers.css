@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+  background: white;
+}
+
+nav {
+  position: relative;
+  z-index: 99;
+}
+
+.flower-section{
+    position: relative;
+    height: 600px;
+    background: radial-gradient(rgb(33, 145, 107), rgb(15, 70, 52));
+    overflow: hidden;
+}
+
+.set{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.set div{
+    position: relative;
+    display: block;
+}
+/* .set div img{
+    background-color: red;
+    padding: 1rem;
+} */
+
+.set div:nth-child(1){
+    position: absolute;
+    left: 5%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7s;
+}
+.set div:nth-child(2){
+    position: absolute;
+    left: 15%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5s;
+}
+.set div:nth-child(3){
+    position: absolute;
+    left: 25%;
+    animation: animate 25s linear infinite;
+}
+.set div:nth-child(4){
+    position: absolute;
+    left: 35%;
+    animation: animate 15s linear infinite;
+}
+.set div:nth-child(5){
+    position: absolute;
+    left: 50%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+}
+.set div:nth-child(6){
+    position: absolute;
+    left: 65%;
+    animation: animate 12s linear infinite;
+    animation-delay: -8s;
+}
+.set div:nth-child(7){
+    position: absolute;
+    left: 75%;
+    animation: animate 14s linear infinite;
+}
+.set div:nth-child(8){
+    position: absolute;
+    left: 85%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7s;
+}
+.set div:nth-child(9){
+    position: absolute;
+    left: 95%;
+    animation: animate 19s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        top: -10%;
+        opacity: 0;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%{
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%{
+        transform: translateX(20px) rotate(135deg);
+    }
+    80%{
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100%{
+        top:110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+.set2{
+    position: absolute;
+    transform: scale(1.5) rotateY(180deg);
+    filter: blur(1px);
+    z-index: 0;
+}
+
+.set3{
+    position: absolute;
+    transform: scale(0.8) rotateX(180deg);
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.flower-title{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50% );
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 5em;
+    font-family: sans-serif;
+    z-index: 1;
+    text-shadow: 4px 4px rgb(65, 65, 65);
+}
