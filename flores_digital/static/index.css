@@ -13,10 +13,18 @@ nav {
   z-index: 99;
 }
 
+.my-section{
+    min-height: 25rem;
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
+
 .flower-section{
     position: relative;
     height: 600px;
     background: radial-gradient(rgb(33, 145, 107), rgb(15, 70, 52));
+    /* background: radial-gradient(rgb(13, 138, 125), rgb(7, 68, 63)); */
     overflow: hidden;
 }
 

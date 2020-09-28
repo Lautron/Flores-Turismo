@@ -1,0 +1,13 @@
+    :root{
+        --my-primary: rgb(13, 151, 140);
+        --my-secondary: rgb(55, 252, 186);
+        --my-tertiary: black;
+        --my-cuaternary: pink;
+    }
+    .my-primary{
+    background-color: var(--my-primary);
+    }
+
+    .my-secondary{
+    background-color: var(--my-secondary);
+    }

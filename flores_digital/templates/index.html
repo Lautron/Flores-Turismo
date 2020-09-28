@@ -1,18 +1,7 @@
 {% extends "layout.html" %}
 
 {% block style %}
-    <link rel="stylesheet" href="{{url_for('static', filename='flowers.css')}}">
-    <style>
-        .my-section{
-            min-height: 25rem;
-            width: 100%;
-            margin: 0;
-            border: 0;
-        }
-        .bg-gray{
-            background-color: rgb(238, 238, 238);
-        }
-    </style>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
 {% endblock %}
 
 {% block content %}
@@ -58,10 +47,10 @@
         {% set ns = namespace(used=false) %}
         {% for town in towns.keys() %}
             {% if ns.used == false %}
-                <div class="text-center">
+                <div class="text-center my-primary">
                     <h3 class="m-0">{{ town }}</h3>
                 </div>
-                <div class="container-fluid my-section border-bottom">
+                <div class="container-fluid my-section border-bottom my-primary">
                     <div class="container">
                         <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
                             <img src="{{url_for('static', filename=towns[town]['img'])}}" class="img-fluid col-sm-2 shadow" alt="A picture of {{ town }}">
@@ -71,10 +60,10 @@
                 </div>
                 {% set ns.used = true %}
             {% else %}
-                <div class="text-center bg-gray">
+                <div class="text-center my-secondary">
                     <h3 class="m-0">{{ town }}</h3>
                 </div>
-                <div class="container-fluid my-section border-bottom bg-gray">
+                <div class="container-fluid my-section border-bottom my-secondary">
                     <div class="container">
                         <div class="row align-items-center" style="min-height: 25rem; justify-content: space-around;">
                             <img src="{{url_for('static', filename=towns[town]['img'])}}" class="img-fluid col-sm-2 shadow" alt="A picture of {{ town }}">
