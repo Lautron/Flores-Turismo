@@ -1,13 +1,43 @@
     :root{
-        --my-primary: rgb(13, 151, 140);
-        --my-secondary: rgb(55, 252, 186);
-        --my-tertiary: black;
-        --my-cuaternary: pink;
+        /* --my-primary-c: 175, 84%;
+        --my-primary-l: 32%;
+        --my-primary: hsl(var(--my-primary-c), var(--my-primary-l));
+        --my-primary-dark: hsl(var(--my-primary-c), calc(var(--my-primary-l) - 5%));
+        --my-primary-darker: hsl(var(--my-primary-c), calc(var(--my-primary-l) - 10%)); */
+        --my-primary-c: 156, 78%;
+        --my-primary-l: 42%;
+        --my-primary: hsl(var(--my-primary-c), var(--my-primary-l));
+        --my-primary-dark: hsl(var(--my-primary-c), calc(var(--my-primary-l) - 5%));
+        --my-primary-darker: hsl(var(--my-primary-c), calc(var(--my-primary-l) - 10%));
+/* 
+        --my-secondary-c: 160, 97%;
+        --my-secondary-l: 60%;
+        --my-secondary: hsl(var(--my-secondary-c), var(--my-secondary-l));
+        --my-secondary-dark: hsl(var(--my-secondary-c), calc(var(--my-secondary-l) - 30%));
+        --my-secondary-darker: hsl(var(--my-secondary-c), calc(var(--my-secondary-l) - 45%)); */
+        --my-secondary-c: 210, 77%;
+        --my-secondary-l: 57%;
+        --my-secondary: hsl(var(--my-secondary-c), var(--my-secondary-l));
+        --my-secondary-dark: hsl(var(--my-secondary-c), calc(var(--my-secondary-l) - 5%));
+        --my-secondary-darker: hsl(var(--my-secondary-c), calc(var(--my-secondary-l) - 10%));
+
     }
     .my-primary{
     background-color: var(--my-primary);
     }
-
+    .my-primary-dark{
+    background-color: var(--my-primary-dark);
+    }
+    .my-primary-darker{
+    background-color: var(--my-primary-darker);
+    }
+    
     .my-secondary{
-    background-color: var(--my-secondary);
+        background-color: var(--my-secondary);
+    }
+    .my-secondary-dark{
+    background-color: var(--my-secondary-dark);
+    }
+    .my-secondary-darker{
+    background-color: var(--my-secondary-darker);
     }

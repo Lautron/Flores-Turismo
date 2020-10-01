@@ -23,7 +23,8 @@ nav {
 .flower-section{
     position: relative;
     height: 600px;
-    background: radial-gradient(rgb(33, 145, 107), rgb(15, 70, 52));
+    /* background: radial-gradient(rgb(33, 145, 107), rgb(15, 70, 52)); */
+    background: radial-gradient(var(--my-primary-dark), var(--my-primary-darker));
     /* background: radial-gradient(rgb(13, 138, 125), rgb(7, 68, 63)); */
     overflow: hidden;
 }
@@ -152,4 +153,27 @@ nav {
     z-index: 1;
     text-shadow: 4px 4px 4px rgb(65, 65, 65);
     font-weight: 600;
+}
+
+.card{
+    height: 12rem;
+    padding-top: 5rem;
+    width: 10rem;
+    background-color: var(--my-secondary);
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1rem;
+}
+
+.bg-grad1{
+    background: linear-gradient(var(--my-primary), var(--my-primary-dark), var(--my-primary));
+}
+.bg-grad2{
+    background: linear-gradient(var(--my-primary-darker), var(--my-primary));
+}
+
+.shield{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
