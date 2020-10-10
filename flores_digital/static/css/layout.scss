@@ -1,0 +1,82 @@
+@import "colors";
+
+
+.my-green{
+    background-color: $my-green;
+}
+.my-dgreen{
+    background-color: $my-dgreen;
+}
+.my-red{
+    background-color: $my-red;
+}
+.my-red-dark{
+    background-color: $my-red-dark;
+}
+.my-pink{
+    background-color: $my-pink;
+}
+.my-white{
+    background-color: $my-white;
+}
+
+.nav {
+    display: flex;
+    background-color: $my-red;
+    justify-content: space-between;;
+}
+
+.nav-list{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: $my-red;
+}
+
+.nav-item{
+  display: flex;
+  align-items: center;
+  background-color: $my-red;
+  transition: background-color 0.1s;
+  color: white;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 1rem;
+  &:hover{
+    background-color: lighten($my-red, 4);
+    }
+}
+
+.search-bar {
+    align-self: center;
+    height: 2rem;
+    width: 25%;
+    background-color: lighten($my-red, 10%);
+    border-radius: 1rem;
+    justify-self: flex-end;
+    margin-right: 3rem;
+}
+
+.search-bar-input {
+    margin: 5px;
+    margin-left: 15px;
+    background-color: transparent;
+    width: 90%;
+    color: white;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    background-color: $my-red;
+    transition: background-color 0.1s;
+    color: white;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
