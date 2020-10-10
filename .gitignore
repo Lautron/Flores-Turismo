@@ -4,3 +4,5 @@ venv
 __pycache__
 .pyc
 css testing
+*.css
+*.css.map
