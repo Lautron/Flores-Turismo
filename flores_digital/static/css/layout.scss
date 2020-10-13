@@ -1,5 +1,9 @@
 @import "colors";
 
+body{
+    margin: 0;
+    padding: 0;
+}
 
 .my-green{
     background-color: $my-green;
@@ -19,11 +23,19 @@
 .my-white{
     background-color: $my-white;
 }
+.my-white-shade{
+    background-color: $my-white-shade;
+}
+
 
 .nav {
     display: flex;
     background-color: $my-red;
     justify-content: space-between;;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    border-top: 3px solid $my-pink;
 }
 
 .nav-list{
@@ -40,7 +52,7 @@
   background-color: $my-red;
   transition: background-color 0.1s;
   color: white;
-  height: 60px;
+  height: 3.75rem;
   text-decoration: none;
   text-align: center;
   padding: 0 1rem;
