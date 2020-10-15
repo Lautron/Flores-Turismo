@@ -23,4 +23,10 @@ def layout():
 @app.route('/grid')
 def grid():
     items = GridTest.query.all()
-    return render_template('grid.html', items=items)
+    icons = [
+            'marker', 'phone',
+            'facebook2', 'mail', 
+            'instagram','globe',
+            ]
+    icons_fp = ['icons/' + icon + '.svg' for icon in icons]
+    return render_template('grid.html', items=items, icons=icons_fp)
