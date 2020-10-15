@@ -26,14 +26,15 @@ body{
 .my-white-shade{
     background-color: $my-white-shade;
 }
+.my-white-dark {
+    color: $my-white-dark;
+}
 
 
 .nav {
     display: flex;
     background-color: $my-red;
     justify-content: space-between;;
-    position: sticky;
-    top: 0;
     z-index: 99;
     border-top: 3px solid $my-pink;
 }
