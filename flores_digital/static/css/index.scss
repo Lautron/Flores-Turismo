@@ -2,7 +2,7 @@
 @import "colors";
 
 main {
-    padding-top: 3.75rem;
+    padding-top: 2rem;
     background-color: $my-white;
 }
 
@@ -182,7 +182,7 @@ main {
     text-align: center;
     margin: 1rem;
     border-radius: 2rem;
-    color: $my-dgreen;
+    color: $my-white-dark;
     box-shadow: inset 10px 10px 6px #f2ead8, 
                 inset -10px -10px 6px #ffffee;
     &:hover{
