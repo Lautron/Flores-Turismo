@@ -1,10 +1,85 @@
-.my-sidebar{
-    min-width: 10rem;
-    max-width: 20rem;
+@import "colors";
+
+body {
+    background-color: $my-white;
 }
-.my-flexbox{
+
+.container {
     display: flex;
 }
+
+.sidebar {
+    height: 50rem;
+    width: 20%;
+    background-color: $my-white-shade;
+    margin: 2rem;
+    margin-right: 0;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(#000000, .16);
+    & h3 {
+        color: $my-dgreen;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+.product-container {
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+    & .product-card {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: $my-white-shade;
+        margin: 1rem;
+        width: 18rem;
+        // border-radius: 1rem;
+        box-shadow: 5px 5px 20px rgba(#000000, .16);
+        & img {
+            width: 100%;
+            height: 11rem;
+            // border: $my-white-shade solid 5px;
+        }
+    }
+    & .info-container{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        }
+        & .icons-container {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            & .icon-div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0.5rem 0 0.5rem 0;
+                & img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin: 0 0.5rem 0 0.5rem;
+                }
+                & p {
+                    margin: 0;
+                    height: min-content;
+                }
+            }
+        }
+        & a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: $my-white-dark;
+            font-weight: 600;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
 .hovereffect {
     /* width:100%;
     height:100%; */
@@ -45,3 +120,4 @@
     opacity:1;
     filter:alpha(opacity=100);
 }
+
