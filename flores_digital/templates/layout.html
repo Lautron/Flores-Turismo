@@ -5,6 +5,17 @@
 <title>{% block title %}{% endblock %}</title>
 <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/tailwind.css')}}"> -->
 <link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 {% block style %}
 
 {% endblock %}
@@ -12,28 +23,31 @@
 <body>
     {% block header %}{% endblock %}
     {% block navbar %}
-    <nav class="nav">
-      <ul class="nav-list">
-         <li>
-            <a class="brand" href="#">Flores Turismo</a>
-         </li>
-         <li>
-            <a class="nav-item" href="#">Que hacer</a>
-         </li>
-         <li>
-           <a class="nav-item" href="#">Alojamiento</a>
-         </li>
-         <li>
-           <a class="nav-item" href="#">Gastronomía</a>
-         </li>
-         <li>
-           <a class="nav-item" href="#">Transporte</a>
-         </li>
-        </ul>
-        <div class="search-bar">
-          <input class="search-bar-input" placeholder="Search..." type="text">
+    <nav class="navbar" id="mynavbar">
+      <a href="#home" class="brand">Flores Turismo</a>
+      <div class="dropdown">
+        <button class="dropbtn">Que hacer
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Atractivos</a>
+          <a href="#">Actividades</a>
         </div>
-      </nav>
+      </div>
+      <a href="#news">Gastronomía</a>
+      <a href="#contact">Alojamiento</a>
+      <div class="dropdown">
+        <button class="dropbtn">Transporte
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Corta Distancia</a>
+          <a href="#">Larga distancia</a>
+          <a href="#">Alquileres</a>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </nav>
     {% endblock %}
 
     {% block content %}
