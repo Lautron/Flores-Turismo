@@ -33,7 +33,7 @@ body {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        height: auto;
+        height: min-content;
         background-color: $my-white-shade;
         margin: 1rem;
         width: 18rem;
