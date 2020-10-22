@@ -13,16 +13,16 @@
         {% for item in items: %}
         <div class="product-card">
             <div class="hovereffect">
-                <img class="" src="{{url_for('static', filename=item.image_file)}}" alt="Picture of {{ item.city_name }}">
+                <img class="" src="{{url_for('static', filename=item.img)}}" alt="Picture of {{ item.name }}">
                 <div class="overlay"></div>
             </div>
             <div class="info-container">
-                <a class="" href="#">{{ item.city_name }}</a>
+                <a href="#">{{ item.name }}</a>
                 <div class="icons-container">
-                    {% for icon in icons %}
+                    {% for icon, data in item.contact.items() %}
                     <div class="icon-div">
-                        <img src="{{ url_for('static', filename=icon)}}" alt="">
-                        <p>Information</p>
+                        <img src="{{ url_for('static', filename='icons/' + icon + '.svg')}}" alt="A {{icon}} icon">
+                        <p>{{data}}</p>
                     </div>   
                     {% endfor %}
                 </div>
