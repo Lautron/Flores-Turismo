@@ -1,6 +1,6 @@
 from flask import render_template
 from flores_digital import app
-from flores_digital.models import GridTest
+from flores_digital.models import ProductData
 
 @app.route('/')
 def index():
@@ -22,11 +22,23 @@ def layout():
 
 @app.route('/grid')
 def grid():
-    items = GridTest.query.all()
-    icons = [
-            'marker', 'phone',
-            'facebook2', 'mail', 
-            'instagram','globe',
-            ]
-    icons_fp = ['icons/' + icon + '.svg' for icon in icons]
-    return render_template('grid.html', items=items, icons=icons_fp)
+    data = ProductData.query.all()
+    data_dict = dictify(data)
+
+    return render_template('grid.html', items=data_dict)
+
+def dictify(sql_obj_list):
+    res = []
+    for obj in sql_obj_list:
+        product_dict = {k: v for k, v in vars(obj).items() if not k.startswith('_') and 'id' not in k}
+        contact_dict = {k: v for k, v in vars(obj.contact[0]).items() if not k.startswith('_') and 'id' not in k}
+        res.append({**product_dict, 'contact': contact_dict})
+    return res
+
+@app.route('/productos/<name>')
+def productos(name):
+    data = ProductData.query.filter_by(product_type=name).all()
+    data_dict = dictify(data)
+
+    return render_template('grid.html', items=data_dict)
+
