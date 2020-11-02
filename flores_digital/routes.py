@@ -42,3 +42,7 @@ def productos(name):
 
     return render_template('grid.html', items=data_dict)
 
+@app.route('/admin/products')
+def product_form():
+    return render_template('product_form.html')
+
