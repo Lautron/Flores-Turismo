@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/forms.css')}}">
+{% endblock %}
+{% block content %}
+<div class="flex-container">
+        <form action="">
+            <h3 style="text-align: center;">Formulario de Productos</h3>
+            <fieldset>
+                <label for="name">Nombre:</label>
+                <input id="name" name="name" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="img">Imagen principal:</label>
+                <input id="img" name="img" type="file">
+            </fieldset>
+            <fieldset>
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description"></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="town">Localidad:</label>
+                <select id="town" name="town">
+                    <option value="Capioví">Capioví</option>
+                    <option value="Caraguatay">Caraguatay</option>
+                    <option value="El Alcazar">El Alcazar</option>
+                    <option value="Garuhapé">Garuhapé</option>
+                    <option value="Montecarlo">Montecarlo</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Ruiz de Montoya">Ruiz de Montoya</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="product-type">Tipo de producto:</label>
+                <select id="product-type" name="product-type">
+                    <option value="Actividades">Actividades</option>
+                    <option value="Alojamiento">Alojamiento</option>
+                    <option value="Atractivos">Atractivos</option>
+                    <option value="Gastronomía">Gastronomía</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="location">Ubicación:</label>
+                <input id="location" name="location" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="phone">Número de teléfono:</label>
+                <input id="phone" name="phone" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="facebook">Facebook:</label>
+                <input id="facebook" name="facebook" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="email">Direccion de email:</label>
+                <input id="email" name="email" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="instagram">Cuenta de Instagram:</label>
+                <input id="instagram" name="instagram" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="website">Sitio Web:</label>
+                <input id="website" name="website" type="text">
+            </fieldset>
+            <fieldset style="margin-top: 3rem;">
+                <input type="submit">
+            </fieldset>
+        </form>
+</div>
+{% endblock %}
