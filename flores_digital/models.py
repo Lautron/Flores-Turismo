@@ -8,25 +8,17 @@ class ProductData(db.Model):
     description = db.Column(db.Text, nullable=False)
     town = db.Column(db.String(30))
     product_type = db.Column(db.String(30))
-    contact = db.relationship('Contact', backref='product', lazy=True)
-    def __init__(self, data_dict, contact):
-        self.name = data_dict.get('name', None)
-        self.img = data_dict.get('img', None) 
-        self.description = data_dict.get('description', None) 
-        self.town = data_dict.get('town', None) 
-        self.product_type = data_dict.get('product_type', None)
-        self.contact = [contact]
-
-
-class Contact(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey('product_data.id'), nullable=False)
+    
     location = db.Column(db.String(50), nullable=False)
     phone = db.Column(db.String(50))
     facebook = db.Column(db.String(50))
     email = db.Column(db.String(50))
     instagram = db.Column(db.String(50))
     website = db.Column(db.String(50))
+
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    
 
     def __init__(self, **kwargs):
         self.location = data_dict.get('location', None)
