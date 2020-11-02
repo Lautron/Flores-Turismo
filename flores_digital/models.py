@@ -8,26 +8,13 @@ class ProductData(db.Model):
     description = db.Column(db.Text, nullable=False)
     town = db.Column(db.String(30))
     product_type = db.Column(db.String(30))
-    
+
     location = db.Column(db.String(50), nullable=False)
     phone = db.Column(db.String(50))
     facebook = db.Column(db.String(50))
     email = db.Column(db.String(50))
     instagram = db.Column(db.String(50))
     website = db.Column(db.String(50))
-
-class Contact(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    
-
-    def __init__(self, **kwargs):
-        self.location = data_dict.get('location', None)
-        self.phone = data_dict.get('phone', None)
-        self.facebook = data_dict.get('facebook', None)
-        self.email = data_dict.get('email', None)
-        self.instagram = data_dict.get('instagram', None)
-        self.website = data_dict.get('website', None)
-
 
 if __name__ == "__main__":
 
