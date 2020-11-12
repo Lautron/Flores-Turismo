@@ -1,6 +1,7 @@
 from flask import render_template
 from flores_digital import app
 from flores_digital.models import ProductData
+from flores_digital.forms import ProductForm
 
 @app.route('/')
 def index():
@@ -42,7 +43,7 @@ def productos(name):
 
     return render_template('grid.html', items=data_dict)
 
-@app.route('/admin/products')
+@app.route('/admin/products', methods=('GET', 'POST'))
 def product_form():
-    return render_template('product_form.html')
+    return render_template('product_form.html', form=ProductForm())
 
