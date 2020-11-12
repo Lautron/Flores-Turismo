@@ -5,7 +5,8 @@
 {% endblock %}
 {% block content %}
 <div class="flex-container">
-    <form action="">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
     {% for field in form if field.name != 'csrf_token' %}
     <fieldset>
         {{ field.label }}
