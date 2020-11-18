@@ -123,7 +123,37 @@ body {
 .dropbtn i {
       padding-left: .4rem;
   }
-  
+
+
+footer {
+    background-color: darken($my-red, 10%);
+    overflow: hidden;
+    height: $nav-height;
+    border-bottom: 3px solid $my-pink;
+    display: flex;
+    justify-content: space-between;
+    & div {
+      color: $my-white;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      & a {
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        padding: 0 1rem 0 1rem;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+    }
+}
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
