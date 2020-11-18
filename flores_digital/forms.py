@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, SubmitField, TextAreaField
+from wtforms import StringField, SelectField, SubmitField, TextAreaField, PasswordField
 from flask_wtf.file import FileField, FileRequired
 from wtforms.validators import DataRequired
 
@@ -40,6 +40,11 @@ class ProductForm(FlaskForm):
     # website
     website = StringField('Pagina Web')
     # submit
+    submit = SubmitField()
+
+class LoginForm(FlaskForm):
+    user = StringField('Usuario', validators=[DataRequired()])
+    password = PasswordField('Contraseña', validators=[DataRequired()])
     submit = SubmitField()
 
 
