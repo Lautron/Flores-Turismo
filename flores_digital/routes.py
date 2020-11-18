@@ -1,7 +1,7 @@
-from flask import render_template, request
+from flask import render_template, request, redirect
 from flores_digital import app, db
-from flores_digital.models import ProductData
-from flores_digital.forms import ProductForm
+from flores_digital.models import ProductData, Admin
+from flores_digital.forms import ProductForm, LoginForm
 
 @app.route('/')
 def index():
@@ -65,5 +65,17 @@ def product_form():
         db.session.add(product)
         db.session.commit()
         print('\n', 'Product uploaded succesfully', '\n')
-    return render_template('product_form.html', form=form)
+    return render_template('form.html', form=form)
+
+@app.route('/admin/login', methods=('GET', 'POST'))
+def login():
+    form = LoginForm(request.form)
+    if form.validate_on_submit():
+        admin = Admin.query.filter_by(name=form.user.data).first()
+        print(admin.name)
+        print(admin.password)
+        if admin and admin.password == form.password.data:
+            print(admin.password == form.password.data)
+            return redirect('/admin/products')
+    return render_template('form.html', form=form)
 
