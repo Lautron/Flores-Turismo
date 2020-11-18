@@ -1,5 +1,6 @@
 @import "colors";
 
+
 .flex-container {
     display: flex;
     align-items: center;
@@ -7,6 +8,7 @@
     width: 100%;
     height: max-content;
     background-color: $my-white;
+    min-height: 100vh;
 }
 
 form {
@@ -15,6 +17,8 @@ form {
     margin: 2rem;
     background-color: $my-white-shade;
     align-items: center;
+    box-shadow:  10px 10px 6px #f2ead8, 
+                    -10px -10px 6px #ffffee;
 }
 
 textarea {
