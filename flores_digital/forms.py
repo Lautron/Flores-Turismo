@@ -14,11 +14,11 @@ class ProductForm(FlaskForm):
     town = SelectField('Localidad', choices=[
         ('capiovi','Capioví'),
         ('caraguatay', 'Caraguatay'),
-        ('el alcazar', 'El Alcazar'),
+        ('el_alcazar', 'El Alcazar'),
         ('garuhape', 'Garuhapé'),
         ('montecarlo', 'Montecarlo'),
-        ('puerto rico', 'Puerto Rico'),
-        ('ruiz de montoya', 'Ruiz de Montoya'),
+        ('puerto_rico', 'Puerto Rico'),
+        ('ruiz_de_montoya', 'Ruiz de Montoya'),
     ])
     # type select
     ptype = SelectField('Tipo de producto', choices=[
