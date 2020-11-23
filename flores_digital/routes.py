@@ -20,11 +20,11 @@ def index():
 @app.route('/grid')
 def grid():
     data = ProductData.query.all()
-    data_dict = dictify(data)
+    data_dict = dictify_product(data)
 
     return render_template('grid.html', items=data_dict)
 
-def dictify(sql_obj_list):
+def dictify_product(sql_obj_list):
     res = []
     contact = {'location', 'phone', 'facebook', 'email', 'instagram', 'website'}
     for obj in sql_obj_list:
@@ -37,7 +37,7 @@ def dictify(sql_obj_list):
 def productos():
     args = request.args
     data = ProductData.query.filter_by(**args).all()
-    data_dict = dictify(data)
+    data_dict = dictify_product(data)
 
     return render_template('grid.html', items=data_dict)
 
@@ -69,9 +69,8 @@ def login():
     form = LoginForm(request.form)
     if form.validate_on_submit():
         admin = Admin.query.filter_by(name=form.user.data).first()
-        print(admin.name)
-        print(admin.password)
         if admin and admin.password == form.password.data:
+            #TODO add more security
             print(admin.password == form.password.data)
             return redirect('/admin/products')
     return render_template('form.html', form=form)
