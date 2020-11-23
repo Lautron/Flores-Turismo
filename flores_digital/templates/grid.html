@@ -8,6 +8,13 @@
 <div class="container">
     <div class="sidebar">
         <h3>Filtros</h3>
+        <a href="{{ request.url.split('&town')[0] + '&town=capiovi'}}">Capioví</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=caraguatay' }}">Caraguatay</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=el_alcazar' }}">El Alcazar</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=garuhape' }}">Garuhapé</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=montecarlo' }}">Montecarlo</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=puerto_rico' }}">Puerto Rico</a>
+        <a href="{{ request.url.split('&town')[0] + '&town=ruiz_de_montoya' }}">Ruiz de Montoya</a>
     </div>
     <div class="product-container">
         {% for item in items: %}
