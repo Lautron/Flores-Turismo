@@ -22,19 +22,18 @@ class ProductForm(FlaskForm):
     ])
     # type select
     ptype = SelectField('Tipo de producto', choices=[
-        ('actividad','Actividad'),
         ('alojamiento','Alojamiento'),
         ('atraccion','Atracción'),
         ('gastronomia','Gastronomía'),
     ])
     # Location string
-    location = StringField('Ubicación')
+    location = StringField('Dirección')
     # phone
     phone = StringField('Telefono')
     # facebook
     facebook = StringField('Facebook')
     # email
-    email = StringField('eMail')
+    email = StringField('Email')
     # instagram
     instagram = StringField('Instagram')
     # website
