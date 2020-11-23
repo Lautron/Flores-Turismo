@@ -17,10 +17,6 @@ def index():
     'El Alcazar': {'img': 'img/escudos/El Alcazar.png'}}
     return render_template('index.html', towns=towns)
 
-@app.route('/layout')
-def layout():
-    return render_template('layout.html')
-
 @app.route('/grid')
 def grid():
     data = ProductData.query.all()
@@ -37,9 +33,10 @@ def dictify(sql_obj_list):
         res.append({**product_dict, 'contact': contact_dict})
     return res
 
-@app.route('/productos/<name>')
-def productos(name):
-    data = ProductData.query.filter_by(ptype=name).all()
+@app.route('/productos')
+def productos():
+    args = request.args
+    data = ProductData.query.filter_by(**args).all()
     data_dict = dictify(data)
 
     return render_template('grid.html', items=data_dict)
