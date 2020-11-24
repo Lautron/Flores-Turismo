@@ -37,7 +37,6 @@ def dictify_product(sql_obj_list):
 def productos():
     args = request.args
     data = ProductData.query.filter_by(**args).all()
-    print('\n', data, '\n')
     data_dict = dictify_product(data)
 
     return render_template('grid.html', items=data_dict)
