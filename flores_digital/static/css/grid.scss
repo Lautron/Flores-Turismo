@@ -9,17 +9,30 @@ body {
 }
 
 .sidebar {
-    height: 50rem;
+    height: min-content;
     width: 20%;
     background-color: $my-white-shade;
     margin: 2rem;
     margin-right: 0;
     border-radius: 1rem;
     box-shadow: 5px 5px 20px rgba(#000000, .16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & h3 {
         color: $my-dgreen;
         text-align: center;
+        font-size: 2rem;
+    }
+    & a {
+        text-decoration: none;
+        color: $my-white-dark;
+        font-weight: bold;
+        padding: 2rem 0 2rem 0;
         font-size: 1.5rem;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
