@@ -54,9 +54,10 @@
             <div class="my-section-row">
                 <img src="{{url_for('static', filename=towns[town]['img'])}}" class="shield" alt="A picture of {{ town }}">
                 <div class="card-container">
-                    <div class="card my-white-shade">Atractivos</div>
-                    <div class="card my-white-shade">Gastronomia</div>
-                    <div class="card my-white-shade">Alojamiento</div>
+
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">Atractivos</a></div>
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">Alojamiento</a></div>
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">Gastronomía</a></div>
                 </div>
             </div>
         </div>
@@ -71,9 +72,9 @@
             <div class="my-section-row">
                 <img src="{{url_for('static', filename=towns[town]['img'])}}" class="shield" alt="A picture of {{ town }}">
                 <div class="card-container">
-                    <div class="card my-white">Atractivos</div>
-                    <div class="card my-white">Gastronomia</div>
-                    <div class="card my-white">Alojamiento</div>
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">Atractivos</a></div>
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">Alojamiento</a></div>
+                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">Gastronomía</a></div>
                 </div>
             </div>
         </div>
