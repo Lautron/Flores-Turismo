@@ -7,14 +7,14 @@ from flores_digital.forms import ProductForm, LoginForm
 def index():
     #TODO create db to replace the dict.
     towns = {
-    'La Región de las Flores': {'img': 'img/escudos/region de las flores.png'}, 
-    'Ruiz de Montoya': {'img': 'img/escudos/Ruiz de Montoya.png'}, 
-    'Puerto Rico': {'img': 'img/escudos/Puerto Rico.png'}, 
-    'Capioví': {'img': 'img/escudos/Capiovi.png'}, 
-    'Garuhapé': {'img': 'img/escudos/Garuhapé.png'}, 
-    'Montecarlo': {'img': 'img/escudos/Montecarlo.png'}, 
-    'Caraguatay': {'img': 'img/escudos/Caraguatay.png'}, 
-    'El Alcazar': {'img': 'img/escudos/El Alcazar.png'}}
+    # 'La Región de las Flores': {'img': 'img/escudos/region de las flores.png', 'query_s': '?town='}, 
+    'Ruiz de Montoya': {'img': 'img/escudos/Ruiz de Montoya.png', 'query_s': '&town=ruiz_de_montoya'}, 
+    'Puerto Rico': {'img': 'img/escudos/Puerto Rico.png', 'query_s': '&town=puerto_rico'}, 
+    'Capioví': {'img': 'img/escudos/Capiovi.png', 'query_s': '&town=capiovi'}, 
+    'Garuhapé': {'img': 'img/escudos/Garuhapé.png', 'query_s': '&town=garuhape'}, 
+    'Montecarlo': {'img': 'img/escudos/Montecarlo.png', 'query_s': '&town=montecarlo'}, 
+    'Caraguatay': {'img': 'img/escudos/Caraguatay.png', 'query_s': '&town=caraguatay'}, 
+    'El Alcazar': {'img': 'img/escudos/El Alcazar.png', 'query_s': '&town=el_alcazar'}}
     return render_template('index.html', towns=towns)
 
 @app.route('/grid')
@@ -37,6 +37,7 @@ def dictify_product(sql_obj_list):
 def productos():
     args = request.args
     data = ProductData.query.filter_by(**args).all()
+    print('\n', data, '\n')
     data_dict = dictify_product(data)
 
     return render_template('grid.html', items=data_dict)
