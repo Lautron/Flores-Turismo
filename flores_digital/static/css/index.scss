@@ -4,6 +4,7 @@
 main {
     padding-top: 2rem;
     background-color: $my-white;
+    width: 100%;
 }
 
 .flower-section{
@@ -142,10 +143,11 @@ main {
 }
 
 .my-section{
-    height: 30rem;
+    height: min-content;
     width: 100%;
     margin: 0;
     border: 0;
+    overflow: hidden;
     h3 {
         text-align: center;
         font-size: 1.5rem;
@@ -157,7 +159,7 @@ main {
 
 .my-section-container {
     display: flex;
-    height: 90%;
+    height: min-content;
     align-items: center;
 }
 
@@ -165,10 +167,14 @@ main {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    align-content: center;
+    padding-bottom: 3rem;
 }
 
 .card-container {
     display: flex;
+    height: min-content;
+    align-self: center;
 }
 
 .card{
@@ -194,6 +200,35 @@ main {
 .shield{
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-    max-height: 15rem;
+    max-height: 60vh;
+    max-width: 60vw;
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        display: none;
+    }
+    .my-section-row {
+        flex-direction: column;
+    }
+    .shield {
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    .card-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        height: 18rem;
+        width: 15rem;
+    }
+    // .card a {
+    //     font-size: 1rem;
+    //     padding: 0 1rem 0 1rem
+    // }
+    :root {
+        font-size: 0.7rem;
+    }
+}
