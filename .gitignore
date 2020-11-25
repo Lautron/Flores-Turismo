@@ -6,3 +6,4 @@ __pycache__
 css testing
 *.css
 *.css.map
+.env
