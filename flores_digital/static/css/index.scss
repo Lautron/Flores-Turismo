@@ -195,6 +195,11 @@ main {
         box-shadow:  10px 10px 6px #f2ead8, 
                     -10px -10px 6px #ffffee;
     }
+    & a {
+        text-decoration: none;
+        color: $my-white-dark;
+        padding: 5rem 2rem 5rem 2rem;
+    }
 }
 
 .shield{
