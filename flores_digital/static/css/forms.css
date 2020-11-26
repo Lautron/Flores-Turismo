@@ -1,0 +1,78 @@
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #FFFBF2;
+  min-height: 100vh;
+}
+
+form {
+  max-height: 100%;
+  width: 30%;
+  margin: 2rem;
+  background-color: #fff6e3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+          box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+}
+
+textarea {
+  height: 5rem;
+  width: 90%;
+}
+
+input {
+  width: 90%;
+  height: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+option, select {
+  height: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 1rem;
+}
+
+fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+fieldset label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 1rem;
+}
+
+label {
+  padding: 1rem 0 0.5rem 0;
+}
+/*# sourceMappingURL=forms.css.map */
