@@ -287,6 +287,12 @@ main {
           box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
 }
 
+.card a {
+  text-decoration: none;
+  color: #402c00;
+  padding: 5rem 2rem 5rem 2rem;
+}
+
 .shield {
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
