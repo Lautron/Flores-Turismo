@@ -2,6 +2,7 @@ from flask import render_template, request, redirect
 from flores_digital import app, db
 from flores_digital.models import ProductData, Admin
 from flores_digital.forms import ProductForm, LoginForm
+import os
 
 @app.route('/')
 def index():
@@ -41,14 +42,28 @@ def productos():
 
     return render_template('grid.html', items=data_dict)
 
+# def save_img(form_img):
+#     file_ext = os.path.splitext(form_img.filename)[-1]
+#     filename = form_img.filename.replace(' ', '_') + file_ext
+#     final_path = os.path.join(app.root_path, 'static/product_pics', filename)
+#     form_img.save(final_path)
+#     print(app.root_path)
+#     return filename
+
 @app.route('/admin/products', methods=('GET', 'POST'))
 def product_form():
     form = ProductForm(request.form)
     if form.validate_on_submit():
         #TODO handle image, and save path on db
+        # if form.img.data:
+        #     img_fn = save_img(form.img.data)
+        # else:
+        #     img_fn = ''
         print(form.ptype.data)
+        img_filename = form.name.data.replace(' ', '-').lower() + '.jpg'
         product = ProductData(
             name = form.name.data,
+            img = img_filename,
             description = form.description.data,
             town = form.town.data,
             ptype = form.ptype.data,
@@ -59,8 +74,12 @@ def product_form():
             instagram = form.instagram.data,
             website = form.website.data
         )
+
+        
+            
         db.session.add(product)
         db.session.commit()
+        redirect('/admin/products')
         print('\n', 'Product uploaded succesfully', '\n')
     return render_template('form.html', form=form)
 
