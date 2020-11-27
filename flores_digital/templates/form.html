@@ -5,12 +5,15 @@
 {% endblock %}
 {% block content %}
 <div class="flex-container">
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         {{ form.hidden_tag() }}
     {% for field in form if field.name != 'csrf_token' %}
     <fieldset>
         {{ field.label }}
-        {{ field }}
+        {{ field(autocomplete='off') }}
+        {% for error in field.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
     </fieldset>
     {% endfor %}
     </form>
