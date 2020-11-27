@@ -1,13 +1,13 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SubmitField, TextAreaField, PasswordField
-from flask_wtf.file import FileField, FileRequired
+from flask_wtf.file import FileField, FileAllowed
 from wtforms.validators import DataRequired
 
 class ProductForm(FlaskForm):
     #Name string
     name = StringField('Nombre', validators=[DataRequired()])
     # Img file
-    img = FileField() # validators=[FileRequired()]
+    # img = FileField('Imagen del producto', validators=[FileAllowed(['jpg', 'png', 'jpeg'])]) # validators=[FileRequired()]
     # Description textarea
     description = TextAreaField('Descripción')
     # Town select
