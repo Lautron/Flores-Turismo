@@ -20,11 +20,16 @@
         {% for item in items: %}
         <div class="product-card">
             <div class="hovereffect">
+                {% if item.img in files %}
                 <img class="" src="{{url_for('static', filename='product_pics/' + item.img)}}" alt="Picture of {{ item.name }}">
+                {% else %}
+                <img class="" src="{{url_for('static', filename='product_pics/default.jpg')}}" alt="Picture of {{ item.name }}">
+                {% endif %}
                 <div class="overlay"></div>
+
             </div>
             <div class="info-container">
-                <a href="#">{{ item.name }}</a>
+                <h4>{{ item.name }}</h4>
                 <div class="icons-container">
                     {% for icon, data in item.contact.items() %}
                         {% if data %}
