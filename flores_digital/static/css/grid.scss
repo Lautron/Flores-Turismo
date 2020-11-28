@@ -6,7 +6,7 @@ body {
 
 .container {
     display: flex;
-    height: 100%;
+    height: min-content;
     justify-content: center;
 }
 

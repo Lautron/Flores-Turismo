@@ -6,7 +6,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
