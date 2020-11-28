@@ -79,7 +79,7 @@ def product_form():
             
         db.session.add(product)
         db.session.commit()
-        redirect('/admin/products')
+        return redirect('/admin/products')
         print('\n', 'Product uploaded succesfully', '\n')
     return render_template('form.html', form=form)
 
