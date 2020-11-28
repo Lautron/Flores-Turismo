@@ -39,8 +39,10 @@ def productos():
     args = request.args
     data = ProductData.query.filter_by(**args).all()
     data_dict = dictify_product(data)
+    file_list = [img for img in os.listdir(os.path.join(app.root_path, 'static/product_pics'))]
 
-    return render_template('grid.html', items=data_dict)
+
+    return render_template('grid.html', items=data_dict, files=file_list)
 
 # def save_img(form_img):
 #     file_ext = os.path.splitext(form_img.filename)[-1]
