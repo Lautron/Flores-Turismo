@@ -5,7 +5,7 @@ class ProductData(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(75), unique=True, nullable=False)
     img = db.Column(db.String(100), default='img/default.jpg')
-    description = db.Column(db.Text, nullable=False)
+    # description = db.Column(db.Text, nullable=False)
     town = db.Column(db.String(30))
     ptype = db.Column(db.String(30))
 
