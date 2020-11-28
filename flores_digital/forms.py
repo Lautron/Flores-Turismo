@@ -22,8 +22,8 @@ class ProductForm(FlaskForm):
     ])
     # type select
     ptype = SelectField('Tipo de producto', choices=[
-        ('alojamiento','Alojamiento'),
         ('atraccion','Atracción'),
+        ('alojamiento','Alojamiento'),
         ('gastronomia','Gastronomía'),
     ])
     # Location string
