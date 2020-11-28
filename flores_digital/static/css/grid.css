@@ -143,7 +143,7 @@ body {
   height: min-content;
 }
 
-.product-container a {
+.product-container h4 {
   text-decoration: none;
   font-size: 1.2rem;
   color: #402c00;
@@ -152,6 +152,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0.5rem;
 }
 
 .hovereffect {

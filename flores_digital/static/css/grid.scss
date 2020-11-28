@@ -85,13 +85,14 @@ body {
                 }
             }
         }
-        & a {
+        & h4 {
             text-decoration: none;
             font-size: 1.2rem;
             color: $my-white-dark;
             font-weight: 600;
             text-align: center;
             justify-content: center;
+            margin: 0.5rem;
         }
     }
 
