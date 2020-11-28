@@ -64,7 +64,6 @@ def product_form():
         product = ProductData(
             name = form.name.data,
             img = img_filename,
-            description = form.description.data,
             town = form.town.data,
             ptype = form.ptype.data,
             location = form.location.data,

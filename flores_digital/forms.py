@@ -9,7 +9,7 @@ class ProductForm(FlaskForm):
     # Img file
     # img = FileField('Imagen del producto', validators=[FileAllowed(['jpg', 'png', 'jpeg'])]) # validators=[FileRequired()]
     # Description textarea
-    description = TextAreaField('Descripción')
+    # description = TextAreaField('Descripción')
     # Town select
     town = SelectField('Localidad', choices=[
         ('capiovi','Capioví'),
