@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
   function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "navbar";
   }
 }
 </script>
@@ -23,7 +23,7 @@
 <body>
     {% block header %}{% endblock %}
     {% block navbar %}
-    <nav class="navbar" id="mynavbar">
+    <nav class="navbar" id="myNavbar">
       <a href="/" class="brand">Flores Turismo</a>
 
       <a href="/productos?ptype=atraccion">Que hacer</a>

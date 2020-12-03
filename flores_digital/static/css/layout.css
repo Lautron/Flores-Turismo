@@ -203,23 +203,52 @@ footer div a:hover {
   }
   .navbar a.icon {
     float: right;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media screen and (max-width: 600px) {
   .navbar.responsive {
     position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
   .navbar.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .navbar.responsive a {
     float: none;
-    display: block;
     text-align: left;
+    height: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navbar.responsive .dropdown {
     float: none;
