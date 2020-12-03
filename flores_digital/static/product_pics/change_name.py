@@ -1,4 +1,4 @@
-import os, shutil
+import os
 
 for folderName, subfolders, filename in os.walk(os.getcwd()):
     for file in filename:
