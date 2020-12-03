@@ -30,16 +30,26 @@
             </div>
             <div class="info-container">
                 <h4>{{ item.name }}</h4>
-                <div class="icons-container">
+                <!-- <div class="icons-container"> -->
                     {% for icon, data in item.contact.items() %}
-                        {% if data %}
+                        {% if icon == 'location' and data %}
+                            <div class="icon-div">
+                                <img src="{{ url_for('static', filename='icons/' + icon + '.svg')}}" alt="A {{icon}} icon">
+                                <a href="{{ 'https://www.google.com/maps/search/?api=1&query=' + data }}">{{data}}</a>
+                            </div>
+                        {% elif icon == 'website' and data %}
+                            <div class="icon-div">
+                                <img src="{{ url_for('static', filename='icons/' + icon + '.svg')}}" alt="A {{icon}} icon">
+                                <a href="{{ data }}">{{ data }}</a>
+                            </div>
+                        {% elif data %}
                             <div class="icon-div">
                                 <img src="{{ url_for('static', filename='icons/' + icon + '.svg')}}" alt="A {{icon}} icon">
                                 <p>{{data}}</p>
                             </div>
                         {% endif %}
                     {% endfor %}
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         {% endfor %}
