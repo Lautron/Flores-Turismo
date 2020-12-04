@@ -189,16 +189,26 @@ main {
     margin: 1rem;
     border-radius: 2rem;
     color: $my-white-dark;
-    box-shadow: inset 10px 10px 6px #f2ead8, 
-                inset -10px -10px 6px #ffffee;
+    box-shadow:  10px 10px 6px #f2ead8, 
+                -10px -10px 6px #ffffee;
     &:hover{
-        box-shadow:  10px 10px 6px #f2ead8, 
-                    -10px -10px 6px #ffffee;
+        box-shadow: inset 10px 10px 6px #f2ead8, 
+                    inset -10px -10px 6px #ffffee;
     }
     & a {
         text-decoration: none;
         color: $my-white-dark;
         padding: 5rem 2rem 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img {
+            width: 4rem;
+            height: 4rem;
+            margin: .5rem;
+            fill: $my-white-dark;
+        }
     }
 }
 
@@ -226,8 +236,8 @@ main {
         align-items: center;
     }
     .card {
-        height: 18rem;
-        width: 15rem;
+        height: 16rem;
+        width: 13rem;
     }
     // .card a {
     //     font-size: 1rem;

@@ -278,19 +278,39 @@ main {
   margin: 1rem;
   border-radius: 2rem;
   color: #402c00;
-  -webkit-box-shadow: inset 10px 10px 6px #f2ead8,  inset -10px -10px 6px #ffffee;
-          box-shadow: inset 10px 10px 6px #f2ead8,  inset -10px -10px 6px #ffffee;
+  -webkit-box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+          box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
 }
 
 .card:hover {
-  -webkit-box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
-          box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+  -webkit-box-shadow: inset 10px 10px 6px #f2ead8,  inset -10px -10px 6px #ffffee;
+          box-shadow: inset 10px 10px 6px #f2ead8,  inset -10px -10px 6px #ffffee;
 }
 
 .card a {
   text-decoration: none;
   color: #402c00;
   padding: 5rem 2rem 5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card a img {
+  width: 4rem;
+  height: 4rem;
+  margin: .5rem;
+  fill: #402c00;
 }
 
 .shield {
@@ -327,8 +347,8 @@ main {
             align-items: center;
   }
   .card {
-    height: 18rem;
-    width: 15rem;
+    height: 16rem;
+    width: 13rem;
   }
   :root {
     font-size: 0.7rem;
