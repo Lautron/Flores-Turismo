@@ -6,6 +6,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 100%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -23,8 +24,8 @@ body {
   margin: 2rem;
   margin-right: 0;
   border-radius: 1rem;
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+          box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,6 +184,20 @@ body {
 .hovereffect:hover .overlay {
   opacity: 1;
   filter: alpha(opacity=100);
+}
+
+.fail-message {
+  font-size: 3rem;
+  margin: 3rem;
+  color: #402c00;
+  background-color: #fff6e3;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 2rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
+          box-shadow: 10px 10px 6px #f2ead8,  -10px -10px 6px #ffffee;
 }
 
 @media only screen and (max-width: 600px) {

@@ -6,6 +6,7 @@ body {
 
 .container {
     display: flex;
+    min-height: 100%;
     height: min-content;
     justify-content: center;
 }
@@ -17,7 +18,8 @@ body {
     margin: 2rem;
     margin-right: 0;
     border-radius: 1rem;
-    box-shadow: 5px 5px 20px rgba(#000000, .16);
+    box-shadow:  10px 10px 6px #f2ead8, 
+                -10px -10px 6px #ffffee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,6 +141,18 @@ body {
 .hovereffect:hover .overlay {
     opacity:1;
     filter:alpha(opacity=100);
+}
+
+.fail-message {
+    font-size: 3rem; 
+    margin: 3rem; 
+    color: $my-white-dark;
+    background-color: $my-white-shade;
+    height: min-content;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow:  10px 10px 6px #f2ead8, 
+                -10px -10px 6px #ffffee;
 }
 
 @media only screen and (max-width: 600px) {
