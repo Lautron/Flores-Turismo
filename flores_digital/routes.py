@@ -9,13 +9,14 @@ def index():
     #TODO create db to replace the dict.
     towns = {
     # 'La Región de las Flores': {'img': 'img/escudos/region de las flores.png', 'query_s': '?town='}, 
-    'Ruiz de Montoya': {'img': 'img/escudos/Ruiz de Montoya.png', 'query_s': '&town=ruiz_de_montoya'}, 
     'Puerto Rico': {'img': 'img/escudos/Puerto Rico.png', 'query_s': '&town=puerto_rico'}, 
     'Capioví': {'img': 'img/escudos/Capiovi.png', 'query_s': '&town=capiovi'}, 
-    'Garuhapé': {'img': 'img/escudos/Garuhapé.png', 'query_s': '&town=garuhape'}, 
     'Montecarlo': {'img': 'img/escudos/Montecarlo.png', 'query_s': '&town=montecarlo'}, 
+    'Garuhapé': {'img': 'img/escudos/Garuhapé.png', 'query_s': '&town=garuhape'}, 
+    'El Alcazar': {'img': 'img/escudos/El Alcazar.png', 'query_s': '&town=el_alcazar'},
     'Caraguatay': {'img': 'img/escudos/Caraguatay.png', 'query_s': '&town=caraguatay'}, 
-    'El Alcazar': {'img': 'img/escudos/El Alcazar.png', 'query_s': '&town=el_alcazar'}}
+    'Ruiz de Montoya': {'img': 'img/escudos/Ruiz de Montoya.png', 'query_s': '&town=ruiz_de_montoya'},
+    }
     return render_template('index.html', towns=towns)
 
 @app.route('/grid')
