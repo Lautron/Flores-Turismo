@@ -55,9 +55,24 @@
                 <img src="{{url_for('static', filename=towns[town]['img'])}}" class="shield" alt="A picture of {{ town }}">
                 <div class="card-container">
 
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">Atractivos</a></div>
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">Alojamiento</a></div>
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">Gastronomía</a></div>
+                    <div class="card my-white-shade">
+                        <a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/attractions.svg')}}" alt="">
+                            Atractivos
+                        </a>
+                    </div>
+                    <div class="card my-white-shade">
+                        <a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/alojamiento.svg')}}" alt="">
+                            Alojamiento
+                        </a>
+                    </div>
+                    <div class="card my-white-shade">
+                        <a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/restaurant.svg')}}" alt="">
+                            Gastronomía
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,9 +87,24 @@
             <div class="my-section-row">
                 <img src="{{url_for('static', filename=towns[town]['img'])}}" class="shield" alt="A picture of {{ town }}">
                 <div class="card-container">
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">Atractivos</a></div>
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">Alojamiento</a></div>
-                    <div class="card my-white-shade"><a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">Gastronomía</a></div>
+                    <div class="card my-white">
+                        <a href="{{ url_for('productos') + '?ptype=atraccion' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/attractions.svg')}}" alt="">
+                            Atractivos
+                        </a>
+                    </div>
+                    <div class="card my-white">
+                        <a href="{{ url_for('productos') + '?ptype=alojamiento' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/alojamiento.svg')}}" alt="">
+                            Alojamiento
+                        </a>
+                    </div>
+                    <div class="card my-white">
+                        <a href="{{ url_for('productos') + '?ptype=gastronomia' + towns[town]['query_s']}}">
+                            <img src="{{url_for('static', filename='img/icons/restaurant.svg')}}" alt="">
+                            Gastronomía
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
